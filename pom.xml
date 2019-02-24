@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zzh.kafka</groupId>
+    <artifactId>kafka_book_demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <developers>
+        <developer>
+            <name>hiddenpps</name>
+            <email>hiddenpps@qq.com</email>
+            <url>https://blog.csdn.net/u013256816</url>
+            <roles>
+                <role>Founder</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <description>
+        欢迎关注微信公众号：朱小厮的博客
+    </description>
+
+    <properties>
+        <scala.version>2.11</scala.version>
+        <slf4j.version>1.7.21</slf4j.version>
+        <kafka.version>2.0.0</kafka.version>
+        <lombok.version>1.16.18</lombok.version>
+        <junit.version>4.11</junit.version>
+        <gson.version>2.2.4</gson.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>
