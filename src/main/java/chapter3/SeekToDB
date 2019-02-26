@@ -1,0 +1,27 @@
+
+/**
+ * 代码清单3-8
+ * Created by 朱小厮 on 2019-02-27.
+ */
+
+consumer.subscribe(Arrays.asList(topic));
+//省略poll()方法以及assignment的逻辑
+for(TopicPartition tp: assignment){
+    long offset = getOffsetFromDB(tp);//从DB中读取消费位移
+    consumer.seek(tp, offset);
+}
+while(true){
+    ConsumerRecords<String, String> records =
+            consumer.poll(Duration.ofMillis(1000));
+    for (TopicPartition partition : records.partitions()) {
+        List<ConsumerRecord<String, String>> partitionRecords =
+                records.records(partition);
+        for (ConsumerRecord<String, String> record : partitionRecords) {
+            //process the record.
+        }
+        long lastConsumedOffset = partitionRecords
+                .get(partitionRecords.size() - 1).offset();
+         //将消费位移存储在DB中
+        storeOffsetToDB(partition, lastConsumedOffset+1);
+    }
+}
