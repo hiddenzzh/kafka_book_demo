@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 代码清单2-1
- * Created by hidden.zhu on 2018/8/29.
+ * Created by 朱小厮 on 2018/8/29.
  */
 public class KafkaProducerAnalysis {
     public static final String brokerList = "localhost:9092";

@@ -7,7 +7,7 @@ import java.util.Properties;
 
 /**
  * 代码清单1-1
- * Created by hidden.zhu on 2018/7/21.
+ * Created by 朱小厮 on 2018/7/21.
  */
 public class ProducerFastStart {
     public static final String brokerList = "localhost:9092";

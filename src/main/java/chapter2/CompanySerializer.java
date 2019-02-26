@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * 代码清单2-3
- * Created by hidden.zhu on 2018/7/26.
+ * Created by 朱小厮 on 2018/7/26.
  */
 public class CompanySerializer implements Serializer<Company> {
     @Override
