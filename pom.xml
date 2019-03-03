@@ -31,6 +31,7 @@
         <junit.version>4.11</junit.version>
         <gson.version>2.2.4</gson.version>
         <protobuff.version>1.5.4</protobuff.version>
+        <spark.version>2.3.1</spark.version>
     </properties>
 
     <dependencies>
@@ -95,11 +96,43 @@
             <artifactId>jackson-core</artifactId>
             <version>2.9.4</version>
         </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-scala_2.11</artifactId>
             <version>2.9.5</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_${scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka-0-10_${scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql-kafka-0-10_${scala.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
