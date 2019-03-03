@@ -6,6 +6,9 @@ import org.apache.kafka.common.TopicPartition;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * Created by 朱小厮 on 2019-03-02.
+ */
 public class TheNewRebalanceListener implements ConsumerRebalanceListener {
     Collection<TopicPartition> lastAssignment = Collections.emptyList();
 
