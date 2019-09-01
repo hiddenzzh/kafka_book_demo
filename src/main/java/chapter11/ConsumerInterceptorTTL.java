@@ -40,7 +40,7 @@ public class ConsumerInterceptorTTL implements
                 //消息超时判定
                 if (ttl > 0 && now - record.timestamp() < ttl * 1000) {
                     newTpRecords.add(record);
-                } else {//没有设置ttl,无需超时判定
+                } else if (ttl < 0) {//没有设置ttl,无需超时判定
                     newTpRecords.add(record);
                 }
             }
